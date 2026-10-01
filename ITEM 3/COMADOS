@@ -1,0 +1,384 @@
+alumno01@rpi-17:~$ cat /etc/os-release
+PRETTY_NAME="Ubuntu 22.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.5 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=jammy
+alumno01@rpi-17:~$ ros2 --version
+usage: ros2 [-h] [--use-python-default-buffering]
+            Call `ros2 <command> -h` for more detailed usage. ...
+ros2: error: unrecognized arguments: --version
+alumno01@rpi-17:~$ echo $ROS_DISTRO
+humble
+alumno01@rpi-17:~$ sudo apt update
+[sudo] password for alumno01: 
+Get:1 https://packages.microsoft.com/repos/code stable InRelease [3,590 B]
+Ign:2 http://packages.ros.org/ros2/ubuntu jammy InRelease                      
+Ign:3 http://ports.ubuntu.com/ubuntu-ports jammy InRelease                     
+Ign:4 http://ports.ubuntu.com/ubuntu-ports jammy-updates InRelease
+Ign:5 http://ports.ubuntu.com/ubuntu-ports jammy-backports InRelease
+Ign:6 http://ports.ubuntu.com/ubuntu-ports jammy-security InRelease
+Ign:2 http://packages.ros.org/ros2/ubuntu jammy InRelease
+Ign:3 http://ports.ubuntu.com/ubuntu-ports jammy InRelease
+Ign:4 http://ports.ubuntu.com/ubuntu-ports jammy-updates InRelease
+Ign:5 http://ports.ubuntu.com/ubuntu-ports jammy-backports InRelease
+Ign:6 http://ports.ubuntu.com/ubuntu-ports jammy-security InRelease
+Ign:2 http://packages.ros.org/ros2/ubuntu jammy InRelease
+Ign:3 http://ports.ubuntu.com/ubuntu-ports jammy InRelease
+Ign:4 http://ports.ubuntu.com/ubuntu-ports jammy-updates InRelease
+Ign:5 http://ports.ubuntu.com/ubuntu-ports jammy-backports InRelease
+Ign:6 http://ports.ubuntu.com/ubuntu-ports jammy-security InRelease
+Err:2 http://packages.ros.org/ros2/ubuntu jammy InRelease
+  Cannot initiate the connection to packages.ros.org:80 (2600:3402:200:227::2). - connect (101: Network is unreachable) Cannot initiate the connection to packages.ros.org:80 (2600:3404:200:237::2). - connect (101: Network is unreachable) Cannot initiate the connection to packages.ros.org:80 (2605:bc80:3010::134). - connect (101: Network is unreachable) Could not connect to packages.ros.org:80 (64.50.233.100), connection timed out Could not connect to packages.ros.org:80 (140.211.166.134), connection timed out Could not connect to packages.ros.org:80 (64.50.236.52), connection timed out
+Err:3 http://ports.ubuntu.com/ubuntu-ports jammy InRelease
+  Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::13). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::14). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10b). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10c). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::15). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10a). - connect (101: Network is unreachable) Could not connect to ports.ubuntu.com:80 (91.189.92.20), connection timed out Could not connect to ports.ubuntu.com:80 (91.189.92.19), connection timed out Could not connect to ports.ubuntu.com:80 (91.189.92.21), connection timed out Could not connect to ports.ubuntu.com:80 (91.189.91.103), connection timed out Could not connect to ports.ubuntu.com:80 (91.189.91.102), connection timed out Could not connect to ports.ubuntu.com:80 (91.189.91.104), connection timed out
+Err:4 http://ports.ubuntu.com/ubuntu-ports jammy-updates InRelease
+  Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::13). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::14). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10b). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10c). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::15). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10a). - connect (101: Network is unreachable)
+Err:5 http://ports.ubuntu.com/ubuntu-ports jammy-backports InRelease
+  Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::13). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::14). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10b). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10c). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::15). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10a). - connect (101: Network is unreachable)
+Err:6 http://ports.ubuntu.com/ubuntu-ports jammy-security InRelease
+  Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::13). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::14). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10b). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10c). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::15). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10a). - connect (101: Network is unreachable)
+Reading package lists... Done
+E: Release file for https://packages.microsoft.com/repos/code/dists/stable/InRelease is not valid yet (invalid for another 5d 19h 42min 0s). Updates for this repository will not be applied.
+alumno01@rpi-17:~$ command -v colcon
+/usr/bin/colcon
+alumno01@rpi-17:~$ python3 -c "import matplolib; print('matplolib OK')"
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'matplolib'
+alumno01@rpi-17:~$ date
+Thu Sep 24 06:55:27 PM -05 2026
+alumno01@rpi-17:~$ timedatectl
+               Local time: Thu 2026-09-24 18:55:35 -05
+           Universal time: Thu 2026-09-24 23:55:35 UTC
+                 RTC time: n/a
+                Time zone: America/Lima (-05, -0500)
+System clock synchronized: no
+              NTP service: active
+          RTC in local TZ: no
+alumno01@rpi-17:~$ sudo timedatectl set-ntp true
+alumno01@rpi-17:~$ date
+Thu Sep 24 06:57:28 PM -05 2026
+alumno01@rpi-17:~$ ping -c 3 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2053ms
+
+alumno01@rpi-17:~$ ping -c 3 google.com
+PING google.com (192.178.234.138) 56(84) bytes of data.
+
+--- google.com ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2052ms
+
+alumno01@rpi-17:~$ sudo apt update
+Get:1 https://packages.microsoft.com/repos/code stable InRelease [3,590 B]
+Ign:2 http://packages.ros.org/ros2/ubuntu jammy InRelease                      
+Ign:3 http://ports.ubuntu.com/ubuntu-ports jammy InRelease                     
+Ign:4 http://ports.ubuntu.com/ubuntu-ports jammy-updates InRelease
+Ign:5 http://ports.ubuntu.com/ubuntu-ports jammy-backports InRelease
+Ign:6 http://ports.ubuntu.com/ubuntu-ports jammy-security InRelease
+Ign:2 http://packages.ros.org/ros2/ubuntu jammy InRelease
+Ign:3 http://ports.ubuntu.com/ubuntu-ports jammy InRelease
+Ign:4 http://ports.ubuntu.com/ubuntu-ports jammy-updates InRelease
+Ign:5 http://ports.ubuntu.com/ubuntu-ports jammy-backports InRelease
+Ign:6 http://ports.ubuntu.com/ubuntu-ports jammy-security InRelease
+Ign:2 http://packages.ros.org/ros2/ubuntu jammy InRelease
+Ign:3 http://ports.ubuntu.com/ubuntu-ports jammy InRelease
+Ign:4 http://ports.ubuntu.com/ubuntu-ports jammy-updates InRelease
+Ign:5 http://ports.ubuntu.com/ubuntu-ports jammy-backports InRelease
+Ign:6 http://ports.ubuntu.com/ubuntu-ports jammy-security InRelease
+Err:2 http://packages.ros.org/ros2/ubuntu jammy InRelease
+  Cannot initiate the connection to packages.ros.org:80 (2600:3402:200:227::2). - connect (101: Network is unreachable) Cannot initiate the connection to packages.ros.org:80 (2600:3404:200:237::2). - connect (101: Network is unreachable) Cannot initiate the connection to packages.ros.org:80 (2605:bc80:3010::134). - connect (101: Network is unreachable) Could not connect to packages.ros.org:80 (64.50.236.52), connection timed out Could not connect to packages.ros.org:80 (140.211.166.134), connection timed out Could not connect to packages.ros.org:80 (64.50.233.100), connection timed out
+Err:3 http://ports.ubuntu.com/ubuntu-ports jammy InRelease
+  Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::13). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::14). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::15). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10a). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10b). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10c). - connect (101: Network is unreachable) Could not connect to ports.ubuntu.com:80 (91.189.92.20), connection timed out Could not connect to ports.ubuntu.com:80 (91.189.91.102), connection timed out Could not connect to ports.ubuntu.com:80 (91.189.91.104), connection timed out Could not connect to ports.ubuntu.com:80 (91.189.92.19), connection timed out Could not connect to ports.ubuntu.com:80 (91.189.91.103), connection timed out Could not connect to ports.ubuntu.com:80 (91.189.92.21), connection timed out
+Err:4 http://ports.ubuntu.com/ubuntu-ports jammy-updates InRelease
+  Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::13). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::14). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::15). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10a). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10b). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10c). - connect (101: Network is unreachable)
+Err:5 http://ports.ubuntu.com/ubuntu-ports jammy-backports InRelease
+  Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::13). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::14). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::15). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10a). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10b). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10c). - connect (101: Network is unreachable)
+Err:6 http://ports.ubuntu.com/ubuntu-ports jammy-security InRelease
+  Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::13). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::14). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2a06:bc80:0:1000::15). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10a). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10b). - connect (101: Network is unreachable) Cannot initiate the connection to ports.ubuntu.com:80 (2620:2d:4002:1::10c). - connect (101: Network is unreachable)
+Reading package lists... Done
+E: Release file for https://packages.microsoft.com/repos/code/dists/stable/InRelease is not valid yet (invalid for another 5d 19h 32min 35s). Updates for this repository will not be applied.
+alumno01@rpi-17:~$ sudo apt install -y python3-matplotlib
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+python3-matplotlib is already the newest version (3.5.1-2build1).
+python3-matplotlib set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 307 not upgraded.
+alumno01@rpi-17:~$ python3 -c "import matplolib; print('matplolib OK')"
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'matplolib'
+alumno01@rpi-17:~$ python3 -c "import matplotlib; print('matplotlib OK')"
+matplotlib OK
+alumno01@rpi-17:~$ ls /opt/ros/humble/share/rosbag2* >/dev/null && echo "rosbag OK"
+rosbag OK
+alumno01@rpi-17:~$ mkdir -p ~/RB2
+alumno01@rpi-17:~$ cd ~/RB2
+alumno01@rpi-17:~/RB2$ unzip "DOcumento de Marcel W(3).zip" -d ~/RB2
+unzip:  cannot find or open DOcumento de Marcel W(3).zip, DOcumento de Marcel W(3).zip.zip or DOcumento de Marcel W(3).zip.ZIP.
+alumno01@rpi-17:~/RB2$ unzip "Documento de Marcelo W(3).zip" -d ~/RB2
+unzip:  cannot find or open Documento de Marcelo W(3).zip, Documento de Marcelo W(3).zip.zip or Documento de Marcelo W(3).zip.ZIP.
+alumno01@rpi-17:~/RB2$ unzip "$HOME/Downloads/kit_reto_alumno (1).zip" -d ~/RB2
+unzip:  cannot find or open /home/alumno01/Downloads/kit_reto_alumno (1).zip, /home/alumno01/Downloads/kit_reto_alumno (1).zip.zip or /home/alumno01/Downloads/kit_reto_alumno (1).zip.ZIP.
+alumno01@rpi-17:~/RB2$ unzip "$HOME/Downloads/Documento de Marcelo W(3).zip" -d ~/RB2
+unzip:  cannot find or open /home/alumno01/Downloads/Documento de Marcelo W(3).zip, /home/alumno01/Downloads/Documento de Marcelo W(3).zip.zip or /home/alumno01/Downloads/Documento de Marcelo W(3).zip.ZIP.
+alumno01@rpi-17:~/RB2$ unzip "$HOME/Downloads/Documento de Marcelo W(3).zip" -d ~/RB2
+unzip:  cannot find or open /home/alumno01/Downloads/Documento de Marcelo W(3).zip, /home/alumno01/Downloads/Documento de Marcelo W(3).zip.zip or /home/alumno01/Downloads/Documento de Marcelo W(3).zip.ZIP.
+alumno01@rpi-17:~/RB2$ unzip "$HOME/Downloads/Documento de Marcelo W(3)" -d ~/RB2
+Archive:  /home/alumno01/Downloads/Documento de Marcelo W(3)
+   creating: /home/alumno01/RB2/src/
+   creating: /home/alumno01/RB2/src/arm_broker_interfaces/
+  inflating: /home/alumno01/RB2/src/arm_broker_interfaces/CMakeLists.txt  
+   creating: /home/alumno01/RB2/src/arm_broker_interfaces/action/
+  inflating: /home/alumno01/RB2/src/arm_broker_interfaces/action/MoveArm.action  
+   creating: /home/alumno01/RB2/src/arm_broker_interfaces/msg/
+  inflating: /home/alumno01/RB2/src/arm_broker_interfaces/msg/QueueState.msg  
+  inflating: /home/alumno01/RB2/src/arm_broker_interfaces/package.xml  
+   creating: /home/alumno01/RB2/src/arm_broker/
+   creating: /home/alumno01/RB2/src/arm_broker/resource/
+ extracting: /home/alumno01/RB2/src/arm_broker/resource/arm_broker  
+   creating: /home/alumno01/RB2/src/arm_broker/arm_broker/
+  inflating: /home/alumno01/RB2/src/arm_broker/arm_broker/cliente.py  
+ extracting: /home/alumno01/RB2/src/arm_broker/arm_broker/__init__.py  
+  inflating: /home/alumno01/RB2/src/arm_broker/arm_broker/fk.py  
+  inflating: /home/alumno01/RB2/src/arm_broker/arm_broker/broker.py  
+  inflating: /home/alumno01/RB2/src/arm_broker/arm_broker/politicas.py  
+  inflating: /home/alumno01/RB2/src/arm_broker/setup.py  
+  inflating: /home/alumno01/RB2/src/arm_broker/setup.cfg  
+  inflating: /home/alumno01/RB2/src/arm_broker/package.xml  
+   creating: /home/alumno01/RB2/analisis/
+  inflating: /home/alumno01/RB2/analisis/metricas.py  
+  inflating: /home/alumno01/RB2/analisis/exportar_csv.py  
+  inflating: /home/alumno01/RB2/LEEME.md  
+  inflating: /home/alumno01/RB2/Guia_Configuracion_Raspberry.md  
+   creating: /home/alumno01/RB2/herramientas/
+  inflating: /home/alumno01/RB2/herramientas/verificar_fk.py  
+  inflating: /home/alumno01/RB2/herramientas/generar_carga.py  
+alumno01@rpi-17:~/RB2$ ls
+analisis  Guia_Configuracion_Raspberry.md  herramientas  LEEME.md  src
+alumno01@rpi-17:~/RB2$ ls ~/RB2/src
+arm_broker  arm_broker_interfaces
+alumno01@rpi-17:~/RB2$ nano ~/RB2/src/arm_broker/arm_broker/fk.py
+alumno01@rpi-17:~/RB2$ python3 - <<'PY'
+import sys
+sys.path.insert(0, 'src/arm_broker')
+
+from arm_broker import fk
+
+print(fk.fk([0,0,0,0,0,0]))
+PY
+(49.99999999999998, -63.399999999999984, 415.8)
+alumno01@rpi-17:~/RB2$ nano ~/RB2/src/arm_broker/arm_broker/politicas.py
+alumno01@rpi-17:~/RB2$ mkdir -p ~/rb2_ws/src
+alumno01@rpi-17:~/RB2$ cp -r ~/RB2/src/* ~/rb2_ws/src/
+alumno01@rpi-17:~/RB2$ ls ~/rb2_ws/src
+arm_broker  arm_broker_interfaces
+alumno01@rpi-17:~/RB2$ source /opt/ros/humble/setup.bash
+alumno01@rpi-17:~/RB2$ cd ~/rb2_ws
+alumno01@rpi-17:~/rb2_ws$ colcon build --symlink-install
+Starting >>> arm_broker_interfaces
+[Processing: arm_broker_interfaces]                             
+Finished <<< arm_broker_interfaces [55.7s]                       
+Starting >>> arm_broker
+Finished <<< arm_broker [8.97s]               
+
+Summary: 2 packages finished [1min 8s]
+alumno01@rpi-17:~/rb2_ws$ colcon build --symlink-install
+Starting >>> arm_broker_interfaces
+Finished <<< arm_broker_interfaces [5.04s]                     
+Starting >>> arm_broker
+Finished <<< arm_broker [12.3s]            
+
+Summary: 2 packages finished [19.6s]
+alumno01@rpi-17:~/rb2_ws$ source ~/rb2_ws/install/setup.bash
+alumno01@rpi-17:~/rb2_ws$ ros2 pkg list | grep arm_broker
+arm_broker
+arm_broker_interfaces
+alumno01@rpi-17:~/rb2_ws$ ros2 interface show arm_broker_interfaces/action/MoveArm
+# priority: 0..255, MAYOR = MAS URGENTE
+float64[] joint_positions
+string client_id
+uint8 priority
+---
+bool success
+string message
+float64 wait_time_s
+float64 exec_time_s
+---
+string state
+int32 queue_position
+float64 elapsed_s
+alumno01@rpi-17:~/rb2_ws$ ros2 interface show arm_broker_interfaces/msg/QueueState
+builtin_interfaces/Time stamp
+	int32 sec
+	uint32 nanosec
+string executing_client
+string executing_goal_id
+float64 executing_elapsed_s
+int32 queue_length
+string[] queued_goal_ids
+string[] queued_clients
+uint8[] queued_priorities
+float64[] queued_wait_s
+int32 total_accepted
+int32 total_rejected
+int32 total_completed
+alumno01@rpi-17:~/rb2_ws$ echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc
+alumno01@rpi-17:~/rb2_ws$ echo 'source ~/rb2_ws/install/setup.bash' >> ~/.bashrc
+alumno01@rpi-17:~/rb2_ws$ source ~/.bashrc
+alumno01@rpi-17:~/rb2_ws$ echo 'export ROS_DOMAIN_ID=144' >> ~/.bashrc
+alumno01@rpi-17:~/rb2_ws$ echo 'export ROS_DOMAIN_ID=52' >> ~/.bashrc
+alumno01@rpi-17:~/rb2_ws$ source ~/.bashrc
+alumno01@rpi-17:~/rb2_ws$ echo $ROS_DOMAIN_ID
+52
+alumno01@rpi-17:~/rb2_ws$ echo $ROS_LOCALHOST_ONLY
+1
+alumno01@rpi-17:~/rb2_ws$ echo 'export ROS_LOCALHOST_ONLY=0' >> ~/.bashrc
+alumno01@rpi-17:~/rb2_ws$ echo $ROS_DOMAIN_ID
+52
+alumno01@rpi-17:~/rb2_ws$ echo $ROS_LOCALHOST_ONLY
+1
+alumno01@rpi-17:~/rb2_ws$ echo 'export ROS_DOMAIN_ID=144' >> ~/.bashrc
+alumno01@rpi-17:~/rb2_ws$ echo 'export ROS_LOCALHOST_ONLY=0' >> ~/.bashrc
+alumno01@rpi-17:~/rb2_ws$ source ~/.bashrc
+^[[A^[[Balumno01@rpi-17:~/echo $ROS_DOMAIN_ID
+144
+alumno01@rpi-17:~/rb2_ws$ echo $ROS_LOCALHOST_ONLY
+0
+alumno01@rpi-17:~/rb2_ws$ export JETSON=172.51.9.22
+alumno01@rpi-17:~/rb2_ws$ ping -c 3 $JETSON
+PING 172.51.9.22 (172.51.9.22) 56(84) bytes of data.
+64 bytes from 172.51.9.22: icmp_seq=1 ttl=64 time=44.7 ms
+64 bytes from 172.51.9.22: icmp_seq=2 ttl=64 time=3.81 ms
+64 bytes from 172.51.9.22: icmp_seq=3 ttl=64 time=91.8 ms
+
+--- 172.51.9.22 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 3.813/46.775/91.804/35.951 ms
+alumno01@rpi-17:~/rb2_ws$ ros2 daemon stop
+ros2 daemon start
+The daemon is not running
+The daemon has been started
+alumno01@rpi-17:~/rb2_ws$ ros2 node list
+alumno01@rpi-17:~/rb2_ws$ ros2 topic list
+/parameter_events
+/rosout
+alumno01@rpi-17:~/rb2_ws$ echo $ROS_DOMAIN_ID
+echo $ROS_LOCALHOST_ONLY
+echo $RMW_IMPLEMENTATION
+echo $ROS_DISCOVERY_SERVER
+144
+0
+
+
+alumno01@rpi-17:~/rb2_ws$ ssh alumno01@172.51.9.22
+alumno01@172.51.9.22's password: 
+Permission denied, please try again.
+alumno01@172.51.9.22's password: 
+Permission denied, please try again.
+alumno01@172.51.9.22's password: 
+alumno01@172.51.9.22: Permission denied (publickey,password).
+alumno01@rpi-17:~/rb2_ws$ ssh alumno01@172.51.9.22
+alumno01@172.51.9.22's password: 
+Permission denied, please try again.
+alumno01@172.51.9.22's password: 
+Permission denied, please try again.
+alumno01@172.51.9.22's password: 
+
+alumno01@rpi-17:~/rb2_ws$ ssh JETCOBOT@172.51.9.22
+JETCOBOT@172.51.9.22's password: 
+Permission denied, please try again.
+JETCOBOT@172.51.9.22's password: 
+
+alumno01@rpi-17:~/rb2_ws$ ssh jetcobot@172.51.9.22
+jetcobot@172.51.9.22's password: 
+Permission denied, please try again.
+jetcobot@172.51.9.22's password: 
+Permission denied, please try again.
+jetcobot@172.51.9.22's password: 
+jetcobot@172.51.9.22: Permission denied (publickey,password).
+alumno01@rpi-17:~/rb2_ws$ ssh jetson@172.51.9.22
+jetson@172.51.9.22's password: 
+Permission denied, please try again.
+jetson@172.51.9.22's password: 
+
+alumno01@rpi-17:~/rb2_ws$ ssh jetson@172.51.9.22
+jetson@172.51.9.22's password: 
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.148-tegra aarch64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+This system has been minimized by removing packages and content that are
+not required on a system that users do not log into.
+
+To restore this content, you can run the 'unminimize' command.
+
+Expanded Security Maintenance for Applications is not enabled.
+
+824 updates can be applied immediately.
+499 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+170 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+Last login: Tue Sep 29 23:41:30 2026 from 172.51.9.16
+
+                              [System Information]
+ROS: humble
+DOMAIN_ID: 102
+IP_Address_1: 172.51.9.22
+IP_Address_2: 172.17.0.1
+jetson@yahboom:~$ echo $ROS_DOMAIN_ID
+echo $ROS_LOCALHOST_ONLY
+echo $RMW_IMPLEMENTATION
+echo $ROS_DISCOVERY_SERVER
+102
+0
+rmw_fastrtps_cpp
+127.0.0.1:11811
+jetson@yahboom:~$ ^C
+jetson@yahboom:~$ export ROS_DOMAIN_ID=102
+export ROS_LOCALHOST_ONLY=0
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+jetson@yahboom:~$ ros2 daemon stop
+ros2 daemon start
+The daemon is not running
+The daemon has been started
+jetson@yahboom:~$ source /opt/ros/humble/setup.bash
+source ~/rb2_ws/install/setup.bash
+
+ros2 run arm_broker broker --ros-args -p politica:=fifo
+[INFO] [1790747197.232144448] [arm_broker]: arm_broker listo · política=fifo · cola_max=20 · único publicador de /joint_states
+^Cjetson@yahboom:~$ ^[[200~source /opt/ros/humble/setup.bash
+-bash: $'\E[200~source': command not found
+jetson@yahboom:~$ source ~/rb2_ws/install/setup.bash
+jetson@yahboom:~$ 
+jetson@yahboom:~$ ros2 run arm_broker broker --ros-args -p politica:=fifo~
+Traceback (most recent call last):
+  File "/home/jetson/rb2_ws/install/arm_broker/lib/arm_broker/broker", line 33, in <module>
+    sys.exit(load_entry_point('arm-broker==0.1.0', 'console_scripts', 'broker')())
+  File "/home/jetson/rb2_ws/install/arm_broker/lib/python3.10/site-packages/arm_broker/broker.py", line 342, in main
+    nodo = ArmBroker()
+  File "/home/jetson/rb2_ws/install/arm_broker/lib/python3.10/site-packages/arm_broker/broker.py", line 38, in __init__
+    raise RuntimeError(f'política desconocida: {nombre}. Hay {list(POLITICAS)}')
+RuntimeError: política desconocida: fifo~. Hay ['fifo', 'prioridad']
+[ros2run]: Process exited with failure 1
+jetson@yahboom:~$ source /opt/ros/humble/setup.bash
+source ~/rb2_ws/install/setup.bash
+
+ros2 run arm_broker broker --ros-args -p politica:=fifo
+[INFO] [1790747599.322318656] [arm_broker]: arm_broker listo · política=fifo · cola_max=20 · único publicador de /joint_states
+
